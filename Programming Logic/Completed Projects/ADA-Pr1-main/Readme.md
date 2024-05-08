@@ -1,10 +1,10 @@
-# Brasileirão e Serie A
+# Brasileirão and Serie A
 
-O **Campeonato Brasileiro**, também conhecido como **Brasileirão** e **Série A**, é a liga brasileira de futebol profissional entre clubes do Brasil, sendo a principal competição de futebol no país. É nela que são indicados os representantes brasileiros para a Copa Libertadores da América, juntamente com o campeão da Copa do Brasil. O campeão do torneio também conquista uma vaga na Supercopa do Brasil no ano seguinte.
+The **Campeonato Brasileiro**, also known as **Brasileirão** and **Série A**, is the Brazilian professional football league among clubs from Brazil, being the main football competition in the country. It is where the Brazilian representatives for the Copa Libertadores da América are indicated, along with the champion of the Copa do Brasil. The champion of the tournament also earns a spot in the Supercopa do Brasil the following year.
 
-# Escopo do projeto
+# Project Scope
 
-#### Para reprodutibilidade do PR sugere a seguintes orientações:
+### For reproducibility suggests the following guidelines:
 
 ```
 bash
@@ -18,69 +18,64 @@ pip install -r Requirements.txt
 conda deactivate
 
 ```
+The project is based on the phases of using CRISP-DM to solve the problem, with minor adaptations for **PR_V1**
 
-O projeto tem como base as fases o uso do CRISP-DM para solucao do problema, com pequenas adapatações para o **PR_V1**
-
-Seguindo as seguintes etapas:
+Following the following steps:
 
 1. Business understanding
-2. Data Understanding
+2 . Data Understanding
 3. Data Preparation
 4. Modeling
 5. Evaluation
 6. Deploy
 7. Feedbacks
 
-
-### PS: o V1 nao comtempla o Deploy e Feedbacks apos o deploy.
+### V1 does not include Deployment and Feedbacks after deployment.
 
 # Business understanding
+A new professional team, **ADA-Santander Football Club** , emerges on the national scene with a revolutionary vision. Its board and management are committed to transforming the football landscape, not only at the national level, but also on a global scale. They firmly believe that data, hitherto underutilized, is the key to success, contrasting with the traditional and often emotional approach that permeates decision-making in sports.
 
+ADA-Santander Football Club is adopting an innovative approach by implementing data-driven management. This change encompasses various sectors crucial to the club's performance, including signings, contract renewals, salary negotiations, dismissals, and even the selection and hiring of coaches.
 
-Uma nova a equipe profissional, o **ADA-Santander Futebol Clube**, emerge no cenário nacional com uma visão revolucionária. Sua diretoria e gerência estão empenhadas em transformar o panorama do futebol, não apenas no âmbito nacional, mas também em escala global. Acreditam firmemente que os dados, até então subutilizados, são a chave para o sucesso, contrastando com a abordagem tradicional e muitas vezes emocional que permeia as decisões no esporte.
-
- A ADA-Santander Futebol Clube está adotando uma abordagem inovadora ao implementar uma administração baseada em dados (DATA-DRIVEN). Esta mudança abrange diversos setores cruciais para o desempenho do clube, incluindo contratações, renovações de contratos, negociações salariais, demissões e até mesmo a seleção e contratação de técnicos.
-
-Acreditando que a análise de dados pode fornecer insights valiosos e informar estratégias mais eficazes, a equipe está comprometida em trazer uma mentalidade mais fundamentada e científica para as decisões que impactam diretamente o desempenho e o sucesso da equipe Essa abordagem inovadora busca não apenas melhorar os resultados no campo, mas também estabelecer um novo padrão de excelência no universo do futebol, destacando-se pela eficiência, planejamento estratégico e vanguarda tecnológica.
-
+Believing that data analysis can provide valuable insights and inform more effective strategies, the team is committed to bringing a more grounded and scientific mindset to decisions that directly impact the team's performance and success. This innovative approach seeks not only to improve results on the field but also to establish a new standard of excellence in the football universe, standing out for efficiency, strategic planning, and technological foresight.
 
 # Data Understanding
 
-Foi usado um dataset modelo (campeonato brasileiro de 2019), contendo a estrura de em formato JSON, com total de 38 colunas e 10 linhas ao total.
+A model dataset was used (Brazilian championship of 2019), containing the structure in JSON format, with a total of 38 columns and 10 rows in total.
 
-Nao ha dados duplicados, ou valores Nan ou nulos dentro do nosso dataset
+There are no duplicate data or NaN or null values within our dataset.
 
-Para cada celula continham dados estatisticos dos jogos de cada rodada.
+For each cell, there were statistical data for each round's matches.
 
 ![Local Image](img/file1.png)
 
-Foi usado um um codigo de teste para extrair as informacoes necessarias para apenas 1 unica celula
+A test code was used to extract the necessary information for only 1 single cell.
 
 ![Local Image](img/teste1.png)
 
-Após conseguir extrair as informações criamos uma tabela pandas para facilitar a visualização do resultado
+After being able to extract the information, we created a pandas table to facilitate the visualization of the result.
 
 ![Local Image](img/Eg1.png)
 
 # Data Preparation 
 
-Para a preparacao dos dados,  criamos uma funcao onde ela recebe um parametro que vai ser a o dataset a ser analisado, segue um exemplo do codigo implemenado.
+For data preparation, we created a function where it receives a parameter that will be the dataset to be analyzed, following an example of the implemented code.
 
-Os dados foram retiradas e trabalhadas para obtermos as informacoes de colocacaoes final, saldo de gol, longevidade  dos tecnicos, gol feito
+The data was extracted and worked on to obtain information on final placements, goal difference, coach longevity, goals scored.
 
 ![Local Image](img/codigo1.png)
 
-## Obtendo um resultado 
+## Obtaining a result
 
 ![Local Image](img/dados_finais.png)
 
-# Conclusāo 
+# Conclusion
 
-O questionamento levantado pela diretoria sobre a existência de uma relação entre a longevidade e a posição final dos times não pode ser respondido de forma taxativa.
+The question raised by the board about the existence of a relationship between longevity and the final position of the teams cannot be answered categorically.
 
 ![Local Image](img/grafico_final.png)
 
-No entanto, para uma resposta mais visual, foi utilizado o gráfico de regressão e um mapa de calor (heatmap) para compreender a correlação entre as variáveis.
+However, for a more visual answer, a regression plot and a heatmap were used to understand the correlation between variables.
 
 **REGPLOT**
 
@@ -90,10 +85,12 @@ No entanto, para uma resposta mais visual, foi utilizado o gráfico de regressã
 
 ![Local Image](img/correlacao.png)
 
-Através desses dois gráficos, podemos entender que a longevidade apresenta uma correlação média com a colocação final. No entanto, como estamos analisando apenas um único ano, não podemos afirmar de maneira mais efusiva, evitando um viés na nossa análise.
+Through these two graphs, we can understand that longevity presents a medium correlation with the final placement. However, as we are analyzing only a single year, we cannot affirm more emphatically, avoiding bias in our analysis.
 
-# Muito Obrigado
-**Colaboradores**
+# Thank you very much
+**Collaborators**
+
+Marcel Cleres - https://www.linkedin.com/in/marcelcleres/
 
 Ane Carol - https://www.linkedin.com/in/anecarolineferreira/
 
@@ -109,7 +106,7 @@ Grabriela Mendes - https://www.linkedin.com/in/gabriele-mendes-adorno-46719493?u
 
 Renan Silva - https://www.linkedin.com/in/renan-msilva?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app 
 
-Marcel Cleres - https://www.linkedin.com/in/marcelcleres/
+
 
 
 
