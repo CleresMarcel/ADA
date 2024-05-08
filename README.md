@@ -10,7 +10,7 @@
  
 ## Within each module, there are:
 
-- Class projects
+- Lessons
 - Proposed exercises
 - Proposed projects
 - Completed projects.
