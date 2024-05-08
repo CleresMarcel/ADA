@@ -23,7 +23,7 @@ The project is based on the phases of using CRISP-DM to solve the problem, with 
 Following the following steps:
 
 1. Business understanding
-2 . Data Understanding
+2. Data Understanding
 3. Data Preparation
 4. Modeling
 5. Evaluation
