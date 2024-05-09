@@ -1,47 +1,54 @@
 
-# Processo de Criação de um Banco de Dados e Desenvolvimento de Modelo de Machine Learning com Streamlit
+# Database Creation Process and Machine Learning Model Development with Streamlit
 
-Neste documento, discutiremos o processo de criação de um banco de dados, incluindo entendimento de atributos, entidades, cardinalidade, criação de tabelas e consultas para análise de dados. Posteriormente, abordaremos a exportação de dados para o desenvolvimento de modelos de machine learning e a criação de um modelo de deploy utilizando Streamlit.
+In this document, we will discuss the process of creating a database, including understanding attributes, entities, cardinality, table creation, and data analysis queries. Later on, we will address data export for machine learning model development and the creation of a deployment model using Streamlit.
 
+Database Creation Process
 
-Processo de Criação do Banco de Dados
+1. Understanding Attributes and Entities
+Example: In an entity "Customer," attributes may include name, age, email, etc.
 
-1. Entendimento de Atributos e Entidades
-Exemplo: em uma entidade "Cliente", atributos podem incluir nome, idade, e-mail, etc.
+2. Entities: Real-world objects represented in the database. Example: "Customer," "Product," "Sale," etc.
 
-2. Entidades: Objetos do mundo real representados no banco de dados. Exemplo: "Cliente", "Produto", "Venda", etc.
+3. Cardinality: Defines the number of instances of an entity that can be associated with instances of another entity. Example: "one to one," "one to many," "many to many."
 
-3. Cardinalidade: Define o número de instâncias de uma entidade que podem estar associadas a instâncias de outra entidade. Exemplo: "um para um", "um para muitos", "muitos para muitos".
+4. Table Creation using a database management system (DBMS) such as MySQL, PostgreSQL, SQLServer, among others, we will create tables to store data according to identified entities and their attributes.
 
-4. Criação de Tabelas
-Utilizando um sistema de gerenciamento de banco de dados (SGBD) como MySQL, PostgreSQL, SQLServer dentre outros  criaremos tabelas para armazenar dados de acordo com as entidades identificadas e seus atributos.
+5. Data Analysis Queries We will use SQL queries to extract useful information from the database, such as statistics, trends, and patterns.
 
-5. Consultas para Análise de Dados
-Utilizaremos consultas SQL para extrair informações úteis do banco de dados, como estatísticas, tendências e padrões.
+# Data Export for Machine Learning Development
+After creating and analyzing the data, we can export it for machine learning model development. The steps include:
 
-# Exportação de Dados para Desenvolvimento de Machine Learning
-Após a criação e análise dos dados, podemos exportá-los para o desenvolvimento de modelos de machine learning. Os passos  incluem
+1. Data Extraction: Exporting the data from the database to a suitable format for analysis, such as CSV, JSON, or directly to Python data structures.
 
-1. Extração de Dados: Exportar os dados do banco de dados para um formato adequado para análise, como CSV, JSON ou diretamente para estruturas de dados Python.
+2. Data Preprocessing: Cleaning the data, filling in missing values, normalizing or standardizing the data, and performing other necessary transformations to prepare the data for modeling.
 
-2. Pré-processamento de Dados: Limpar os dados, preencher valores ausentes, normalizar ou padronizar os dados, e realizar outras transformações necessárias para preparar os dados para modelagem.
+3. Data Splitting: Separating the data into training, validation, and testing sets.
 
-3. Divisão de Dados: Separar os dados em conjuntos de treinamento, validação e teste.
+4. Machine Learning Model Development: Using libraries like Scikit-learn, TensorFlow, or PyTorch to build and train machine learning models.
 
-4. Desenvolvimento do Modelo de Machine Learning: Utilizar bibliotecas como Scikit-learn, TensorFlow ou PyTorch para construir e treinar modelos de machine learning.
+# Data Export for Machine Learning Development
+After creating and analyzing the data, we can export them for machine learning model development. The steps include:
 
-# Modelo de Deploy em Streamlit
+1. Data Extraction: Exporting the data from the database to a suitable format for analysis, such as CSV, JSON, or directly to Python data structures.
 
-Streamlit é uma biblioteca Python para a criação de aplicativos da web para análise de dados e machine learning de forma simples e rápida. Para criar um modelo de deploy em Streamlit, os passos podem incluir:
+2. Data Preprocessing: Cleaning the data, filling in missing values, normalizing or standardizing the data, and performing other necessary transformations to prepare the data for modeling.
 
-1. Desenvolvimento do Aplicativo: Escrever o código do aplicativo Streamlit, que inclui a definição da interface do usuário e a integração com o modelo de machine learning.
+3. Data Splitting: Separating the data into training, validation, and testing sets.
 
-2. Implantação do Aplicativo: Utilizar plataformas de hospedagem como Azure, AWS, ou Google Cloud Platform para implantar o aplicativo .
+4. Machine Learning Model Development: Using libraries like Scikit-learn, TensorFlow, or PyTorch to build and train machine learning models.
 
-3. Teste e Manutenção: Testar o aplicativo implantado para garantir seu funcionamento adequado e realizar manutenção conforme necessário.
+# Streamlit Deployment Model
 
+Streamlit is a Python library for creating web applications for data analysis and machine learning quickly and easily. To create a deployment model in Streamlit, the steps may include:
 
-# Instruções para instalação
+1. Application Development: Write the Streamlit application code, which includes defining the user interface and integrating with the machine learning model.
+
+2. Application Deployment: Use hosting platforms such as Azure, AWS, or Google Cloud Platform to deploy the application.
+
+3. Testing and Maintenance: Test the deployed application to ensure its proper functioning and perform maintenance as necessary."
+
+# Installation guide
 
 ```bash
 conda create -n stenv python=3.8
